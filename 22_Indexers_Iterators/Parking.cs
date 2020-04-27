@@ -14,9 +14,19 @@ namespace _22_Indexers_Iterators
         private List<Car> _cars = new List<Car>();
         private const int MAX_CARS = 100;
 
+        public Car this[string number]
+        {
+            get
+            {
+                var car = _cars.FirstOrDefault(c => c.Number == number);
+                return car;
+            }
+
+        }
+
         public int Count => _cars.Count; //быстрое св-во (только для чтения). МОжно объявить доступ к закрытому полю класса только для чтения.
                                          //без геттеров и сеттеров.
-        public string Name { get; set }
+        public string Name { get; set; }
 
         public int Add(Car car)
         {
@@ -34,12 +44,20 @@ namespace _22_Indexers_Iterators
                    
         }
 
+        //автомобиль выехал
         public void GoOut(string number)
         {
             if (string.IsNullOrWhiteSpace(number))
             {
-                throw 
+                throw new ArgumentNullException(nameof(number), "Number is null or empty");
             }
+
+            //Linq
+            var car = _cars.FirstOrDefault(c => c.Number == number);  
+            if(car !=null)
+            {
+                _cars.Remove(car);
+            }    
         }
         
     }
