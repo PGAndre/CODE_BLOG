@@ -10,6 +10,7 @@ namespace _22_Indexers_Iterators
     {
         static void Main(string[] args)
         {
+            //1
         }
     }
 }
