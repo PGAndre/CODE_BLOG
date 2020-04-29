@@ -12,7 +12,7 @@ namespace _22_Indexers_Iterators
         {
             var cars = new List<Car>()
             {
-                new Car() {Name = "Ford", Number = "A001AA01"},
+                new Car() {},
                 new Car() {Name = "Lada", Number = "T007KK02"}
             };
 
@@ -47,7 +47,7 @@ namespace _22_Indexers_Iterators
             Console.WriteLine("Введите номер нового автомобиля");
             var a = Console.ReadLine();
 
-            parking[1] = new Car() { Name = "Audi", Number = a };
+            parking[-1] = new Car() { Name = "Audi", Number = a };
             Console.WriteLine(parking[1]);
 
             //Console.WriteLine(parking._cars[0]);

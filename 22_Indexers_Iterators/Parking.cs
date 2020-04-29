@@ -52,10 +52,10 @@ namespace _22_Indexers_Iterators
 
         public int Add(Car car)
         {
-            if (car == null)
-            {
-                throw new ArgumentNullException(nameof(car), "car is absent");
-            }
+            //if (car == null)
+            //{
+            //    throw new ArgumentNullException(nameof(car), "car is absent");
+            //}
 
             if (_cars.Count < MAX_CARS)
             {
@@ -69,10 +69,10 @@ namespace _22_Indexers_Iterators
         //автомобиль выехал
         public void GoOut(string number)
         {
-            if (string.IsNullOrWhiteSpace(number))
-            {
-                throw new ArgumentNullException(nameof(number), "Number is null or empty");
-            }
+            //if (string.IsNullOrWhiteSpace(number))
+            //{
+            //    throw new ArgumentNullException(nameof(number), "Number is null or empty");
+            //}
 
             //Linq
             var car = _cars.FirstOrDefault(c => c.Number == number);  
