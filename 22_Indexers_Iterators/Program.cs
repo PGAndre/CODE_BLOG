@@ -40,15 +40,22 @@ namespace _22_Indexers_Iterators
             }
 
             Car SearchedCar = parking["A001AA01"];
-            Console.WriteLine(SearchedCar.Name);
+            Console.WriteLine(SearchedCar?.Name);
             SearchedCar = parking["A001AA02"];
             Console.WriteLine(SearchedCar?.Name);
 
             Console.WriteLine("Введите номер нового автомобиля");
             var a = Console.ReadLine();
 
-            parking[-1] = new Car() { Name = "Audi", Number = a };
+            parking[-10] = new Car() { Name = "Audi", Number = a };
             Console.WriteLine(parking[1]);
+            //parking.GoOut("T007KK02");
+            Console.WriteLine(1111);
+
+            foreach (var car in parking)
+            {
+                Console.WriteLine(car);
+            }
 
             //Console.WriteLine(parking._cars[0]);
             Console.Read();

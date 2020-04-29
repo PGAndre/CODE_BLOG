@@ -102,7 +102,7 @@ namespace _22_Indexers_Iterators
         }
 
 
-        public IEnumerator<Car> GetEnumerator() //просто IEnumerator Будет возвращать Object - не будут доступны св-ва объекта Car
+        public IEnumerator GetEnumerator() //просто IEnumerator Будет возвращать Object - не будут доступны св-ва объекта Car
         {
             return _cars.GetEnumerator();
         }
