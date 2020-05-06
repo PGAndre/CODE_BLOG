@@ -16,6 +16,14 @@ namespace _11_Operator_Reload
 
         public int Volume { get; set; }
 
+        public double Energy
+        {
+            get
+            {
+                return Calorie * Volume / 100.0;
+            }
+        }
+
         public Product(string name, int calorie, int volume) //Но может быть конструктор! чтобы все конкретные классы могли его использовать! у наследника должен быть конструктор 
             // с таким же набором параметров.
         {
@@ -38,7 +46,7 @@ namespace _11_Operator_Reload
 
         public override string ToString()
         {
-            return Name;
+            return $"{Name}. Каллоийность: {Calorie}, Объем: {Volume}";
         }
     }
 }
