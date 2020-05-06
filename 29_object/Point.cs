@@ -12,6 +12,10 @@ namespace _29_object
     {
         public int X { get; set; }
 
+        public Class1 class1 { get; set; }
+
+        public Point Y { get; set; }
+
         public override bool Equals(object obj) //внимание - принмает любой тип ,а не только Point
                                                 //правила переопределения Equals 
                                                 //1. методе не должен выкидывать Exceptions (Null)
@@ -46,5 +50,20 @@ namespace _29_object
             return X;
         }
 
+        public override string ToString()
+        {
+            return X.ToString();
+        }
+
+        public  new Type GetType()
+        {
+            return typeof(UInt16);
+        }
+
+        public Point Clone()
+        {
+            return MemberwiseClone() as Point;
+        }
     }
+
 }

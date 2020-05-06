@@ -30,10 +30,49 @@ namespace _29_object
             Console.WriteLine(p1.Equals(p2)); // вот тут всё ОК - false, хотя внутренности объета идентичны
 
             Console.WriteLine(new Class1().GetHashCode());
-            Console.WriteLine(oj.GetHashode()); //видит, что это int, запакованный в object. поэтому выдает значение 5.
+            Console.WriteLine(oj.GetHashCode()); //видит, что это int, запакованный в object. поэтому выдает значение 5.
             Console.WriteLine(p1.GetHashCode());
 
+            Console.WriteLine(i.ToString());
+            Console.WriteLine(p1.ToString());
+
+            Console.WriteLine(i.GetType());
+            Console.WriteLine(oi.GetType());
+            Console.WriteLine(p1.GetType()); //Опасно замещать метод, а переопределять нельзя (не virtual).
+
+            //typeof(Point) == p1.GetType();
+
+            Console.WriteLine(typeof(Point));
+
+            Console.WriteLine(Object.Equals(5, 5));
+            Console.WriteLine(Object.ReferenceEquals(5, 5));
+            Console.WriteLine(Object.ReferenceEquals(p2, p2));
+
+            var pp = new Point() { X = 7, Y = new Point() };
+            
+
+            var pp2 = pp;            // ссылка на один и тот же объект. При изменении одного - будет изменяться и другой. Для создания нового объекта в другом участке памяти 
+            //с новой ссылкой необходимо использовать клонирование.
+            pp2.X = 77;
+            var pp3 = pp.Clone();
+            pp3.Y.X = 222;
+            Console.WriteLine(pp3.Y.X);
+            pp2.Y = new Point() { X = 99 };
+
+            
+            
+            Console.WriteLine(pp3);
+            Console.WriteLine(pp);
+
+            
+
+
+
+
+
             Console.ReadLine();
+
+
 
             
 
