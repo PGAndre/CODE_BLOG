@@ -23,7 +23,7 @@ namespace _29_object
                                                 //3. (a=b, b=c) => a=c
                                                 //4. переопределяя equals -> переопрелели и оператор "="
         {
-            return base.Equals(obj);
+            //return base.Equals(obj);
             {
                 // if (obj == null) return false; - так же не нужно, тк if покрывает проверку на null
 

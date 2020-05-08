@@ -26,5 +26,16 @@ namespace _11_Operator_Reload
         {
             return Apple.Add(apple1,apple2);
         }
+
+        static public Apple Add(Apple apple1, int volume)
+        {
+            var apple = new Apple(apple1.Name, apple1.Calorie, volume+ apple1.Volume);
+            return apple;
+        }
+
+        public static Apple operator +(Apple apple1, int volume)
+        {
+            return Apple.Add(apple1, volume);
+        }
     }
 }
