@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "29_object", "29_object\29_o
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_Operator_Reload", "11_Operator_Reload\11_Operator_Reload.csproj", "{C8FFB0FD-6CF1-480C-9FA4-E66A2FEC1CC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20_LINQ", "20_LINQ\20_LINQ.csproj", "{01EC35A9-3582-454C-A6FA-7F462FAF8738}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C8FFB0FD-6CF1-480C-9FA4-E66A2FEC1CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8FFB0FD-6CF1-480C-9FA4-E66A2FEC1CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8FFB0FD-6CF1-480C-9FA4-E66A2FEC1CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01EC35A9-3582-454C-A6FA-7F462FAF8738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01EC35A9-3582-454C-A6FA-7F462FAF8738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01EC35A9-3582-454C-A6FA-7F462FAF8738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01EC35A9-3582-454C-A6FA-7F462FAF8738}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
